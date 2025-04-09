@@ -17,7 +17,6 @@ const unsigned int SCR_HEIGHT = 768;
 float lastX = SCR_WIDTH / 2,
 lastY = SCR_HEIGHT / 2;
 
-// векторная алгебра
 glm::vec3 cameraPos = glm::vec3(0.0f, 0.0f, 3.0f);
 glm::vec3 cameraFront = glm::vec3(0.0f, 0.0f, -1.0f);
 glm::vec3 cameraUp = glm::vec3(0.0f, 1.0f, 0.0f);
@@ -169,7 +168,6 @@ int main()
 		float red = (sin(timeValue) + 1.0) / 2.0;
 		float green = (cos(timeValue) + 1.0) / 2.0;
 		float blue = (sin(timeValue) + 0.5) / 2.0;
-		//float yPos = sin(timeValue * 5.0);
 
 		glm::mat4 projection = glm::perspective(glm::radians(fov), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
 		glm::mat4 view = glm::lookAt(cameraPos, cameraPos + cameraFront, cameraUp);
